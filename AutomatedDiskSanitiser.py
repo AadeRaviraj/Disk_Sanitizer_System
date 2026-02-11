@@ -157,7 +157,7 @@ def main():
         print("Invalid number of arguments ")
         print("Please specify the name of directory ")
         return
-    schedule.every(1).minute.do(CreateLog,sys.argv[1])
+    schedule.every(1).day.do(CreateLog,sys.argv[1])
     
     while True:
         schedule.run_pending()
